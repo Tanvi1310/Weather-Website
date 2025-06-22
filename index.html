@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon (1).ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Weather app</h1>
+
+        <div class="tab_container">
+            <p class="tab" data-userwhether>Your Weather</p>
+            <p class="tab" data-searchwhether>Search Weather</p>
+        </div>
+
+        <div class="whethercontainer">
+
+            <!-- grant location container  -->
+          <div class="subcontainer grant_location_container">
+              <img src="location.png" alt="" width="80" height="80" loading="lazy">
+               <p>Grant location access</p>
+               <p>allow access to get weather information</p>
+               <button class="btn" data-grantaccess>grant access</button>
+          </div>
+
+
+          <!-- form container search form  -->
+     <form class="formcontainer" datasearchform>
+        <input type="text" placeholder="search your city..." data-searchinput>
+        <button class="btn" type="submit">
+            <img src="search.png" width="20" height="20" loading="lazy">
+        </button>
+    </form> 
+
+
+    <!-- loading screen container -->
+      <div class="subcontainer loadingcontainer">
+    <img src="loading.gif" width="150" height="150">
+    <p>loading</p>
+    </div>
+
+    
+    <!-- show whether info  -->
+<div class="subcontainer userinfocontainer">
+    <div class="name">
+    <p datacityname></p>
+    <img src="" datacountryicon>
+    </div>
+
+
+    <p datawhetherdescription></p>
+
+    <img src="" data-whethreicon>
+
+    <p data-temp></p>
+
+
+    <div class="paramtercontainer"> 
+
+        <!-- first card of whether  -->
+        <div class="parameter"> 
+            <img src="wind.png" >
+            <p>Windspeed</p>
+            <p datawindspeed></p>
+        </div> 
+    
+        <!-- second card of whether  -->
+        <div class="parameter">
+            <img src="humidity.png" >
+            <p>humidity</p>
+            <p data-humidity></p>
+        </div>
+    
+        <!-- third card whether  -->
+         <div class="parameter">
+            <img src="cloud.png" >
+            <p>Clouds</p>
+            <p data-cloudiness></p>
+        </div> 
+    </div>
+</div>
+
+<div class="subcontainer api-error-container">
+    <img src="not-found.png" data-notfoundimg>
+    <p data-apierrortext>City Not Found</p>
+    <!-- <button class="btn" data-apierrorbtn style="display: none;">Retry</button> -->
+</div>
+
+   </div>
+    </div>      
+    <script src="index2.js"></script>
+</body>
+</html>
+
+
